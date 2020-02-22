@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tạo bảng, trộn dòng và cột</title>
+	<link rel="stylesheet" href="css/general.css">
+	<style>
+		h2 {
+			color: red;
+		}
+		table {
+		  border-collapse: collapse;
+		}
+
+		table, th, td {
+		  border: 1px solid black;
+		  padding: 5px 20px;
+		  margin: 0 auto;
+		}
+		
+	</style>
+</head>
+<body>
+	<h2 class="text-center">Chương trình học - ngành lập trình</h2>
+	<div class="wrapper-content">
+		<div class="information">
+			<table>
+				<tr style="background-color: #ff005a; color: #fff">
+					<th rowspan="2">Nhóm học phần</th>
+					<th rowspan="2">Môn học</th>
+					<th colspan="2">Số tiết</th>
+				</tr>
+				<tr style="background-color: #ff005a; color: #fff">
+					<td>Lý thuyết</td>
+					<td>Thực hành</td>
+				</tr>
+				<tr>
+					<td rowspan="5" style="color: #ff005a"> I. Tin học văn phòng</td>
+					<td>Hệ điều hành Windows</td>
+					<td>3</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Sử dụng Internet</td>
+					<td>3</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Soạn thảo văn bản</td>
+					<td>3</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Tạo bài trình diễn MS PowerPoint</td>
+					<td>3</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Exel</td>
+					<td>3</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td rowspan="2" style="color: #ff005a"> II. Kỹ thuật lập trình</td>
+					<td>Nhập môn lập trình</td>
+					<td>3</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Kỹ thuật lập trình</td>
+					<td>3</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td colspan="4">....</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
