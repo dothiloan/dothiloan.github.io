@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tạo bảng, trộn dòng và cột</title>
+	<link rel="stylesheet" href="css/general.css">
+	<style>
+		table {
+			border-collapse: collapse;
+			max-width: 600px;
+    		margin: 30px auto;
+
+		}
+
+		table, th, td {
+			border: 1px solid black;
+		}
+		img {
+			max-width: 100px;
+		}
+		p {
+			color: red;
+			position: relative;
+			padding-left: 14px;
+		}
+		p::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			width: 7px;
+			height: 9px;
+			border: 1px solid red;
+		}
+		.div1 {
+			width: 49%;
+			float: left;
+			border-right: 1px solid #000;
+		}
+		.div2 {
+			width: 50%;
+			float: right;
+		}
+
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td colspan="3" style="background-color: red; color: #fff;" class="text-right"><h3>Công nghệ dầu gội dưỡng tóc mới</h3></td>
+			<td rowspan="3" class="text-center">
+				<img src="images/bai10.jpg" alt="Dau goi">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3"></td>
+		</tr>
+		<tr style="background-color: pink;">
+			<td colspan="3"><h2 class="text-center" style="color: red;">Tỏa sáng cùng DOUBLE RICH</h2></td>
+		</tr>
+		<tr>
+			<td class="main-content" colspan="4">
+				<div class="div1">
+					<p>Sản phẩm khuyến mãi</p>
+					<ul>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+					</ul>
+					<p>Đối tượng tham gia</p>
+					<ul>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </li>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam beatae similique accusamus accusantium repellat sunt aut ipsam autem placeat ab id, aperiam doloribus fugiat animi mollitia, veritatis rem reiciendis dolorem?</li>
+					</ul>
+				</div>
+				<div class="div2">
+					<p>Cách thức nhận giải</p>
+					<ol>
+						<li><b><i>Giải khuyến khích:</i></b> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+						<li><b><i>Giải khuyến khích:</i></b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam beatae similique accusamus accusantium repellat sunt aut ipsam autem placeat ab id, aperiam doloribus fugiat animi mollitia, veritatis rem reiciendis dolorem</li>
+					</ol>
+				</div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

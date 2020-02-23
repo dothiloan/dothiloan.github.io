@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/general.css">
+	<style>
+		body {
+			max-width: 1000px;
+		    border: 1px solid #0022ff9e;
+		    margin: 0 auto;
+		}
+		.wrapper-top {
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+
+		}
+
+		.wrapper-top h1 {
+			font-size: 50px;
+			color: blue;
+			 margin: 10px 0;
+		}
+
+		.wrapper-top h1 .what {
+			font-size: 40px;
+		}
+
+		.wrapper-top h1 .where {
+			font-size: 30px;
+		}
+
+		.wrapper-top img {
+			max-height: 80px;
+			margin-left: 50px;
+		}
+		.wrapper-content {
+			display: flex;
+		    border-top: 1px solid #0022ff9e;
+		    margin: 0;
+		}
+		.wrapper-content .right-section {
+			border-left: 1px solid #0022ff9e;
+		}
+		.left-section {
+			padding-right: 20px;
+		}
+		.left-section ul li {
+			white-space: nowrap;
+    		list-style: circle;
+		}
+		h3 {
+			background: #0022ff9e;
+		    color: #fff;
+		    margin: 0;
+		    padding: 10px 5px;
+		}
+		h4.title {
+			color: blue;
+    		margin: 5px;
+		}
+		.content {
+			padding: 5px;
+    		display: flex;
+		}
+		.content img {
+			max-width: 200px;
+		}
+		.content p {
+			margin-top: 0;
+    		padding-left: 10px;
+		}
+		.content a {
+			display: flex;
+    		flex-direction: row-reverse;
+		}
+		.content ul {
+			width: 70%;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper-top" id="section0">
+		<h1>Ai? <span class="what">Cái gì? </span><span class="where">Ở đâu?</span></h1>
+		<!-- <h2>Cái gì?</h2>
+		<h3>Ở đâu?</h3> -->
+		<img src="images/bai16.jpg" alt="">
+	</div>
+	<div class="wrapper-content">
+		<div class="left-section">
+			<ul>
+				<li><a href="#section1">Tình yêu và gia đình</a></li>
+				<li><a href="#section2">Sức khỏe</a></li>
+				<li><a href="#section3">Du lịch</a></li>
+				<li><a href="#section4">Ẩm thực</a></li>
+				<li><a href="#section5">Âm nhạc</a></li>
+			</ul>
+		</div>
+		<div class="right-section">
+			<div id="section1">
+				<h3>Tình yêu và gia đình</h3>
+				<h4 class="title">Trầu cau</h4>
+				<div class="content">
+					<img src="images/section1.jpg" alt="">
+					<p>Tình yêu là gì? Là ta yêu một người mỗi ngày trong một năm. Mỗi năm trong một đời người...</p>
+				</div>
+				<hr>
+				<h4 class="title">Xây dựng hạnh phúc gia đình qua những bữa cơm hàng ngày</h4>
+				<div class="content">
+					<img src="images/section1.1.jpg" alt="">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum sunt iure, quaerat quas incidunt eligendi iste, reprehenderit rem vero quasi odio dolore nisi dignissimos! Laboriosam dolor saepe nobis, rem in!</p>
+			</div>
+			<div id="section2">
+				<h3>Sức khỏe</h3>
+				<h4 class="title">10 lời khuyên trong dinh dưỡng</h4>
+				<div class="content">
+					<img src="images/section2.jpg" alt="">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut sequi, modi, architecto eos quaerat eaque nobis esse. Esse beatae aliquid rem pariatur laborum quas iusto, facilis, consequatur velit sunt, eos.</p>
+				</div>
+				<hr>
+				<h4 class="title">Làm sao để bỏ thuốc lá</h4>
+				<div class="content">
+					<img src="images/section2.1.jpg" alt="">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum sunt iure, quaerat quas incidunt eligendi iste, reprehenderit rem vero quasi odio dolore nisi dignissimos! Laboriosam dolor saepe nobis, rem in!</p>
+				</div>
+				<a href="#section0">Về đầu trang</a>
+			</div>
+			<div id="section3">
+				<h3>Du lịch</h3>
+				<h4 class="title">Các tour mới nhất</h4>
+				<div class="content">
+					<ul>
+						<li>Côn Minh - Đại Lý - Lệ Giang</li>
+						<li>Đến Macao xem casino</li>
+						<li>Về Cà Mau ăn tôm tít</li>
+					</ul>
+				</div>
+				<hr>
+				<h4 class="title">Các điểm du lịch nổi tiếng trên thế giới</h4>
+				<div class="content">
+					<ul>
+						<li>Đảo Bali xinh đẹp - Indonexia</li>
+						<li>Thành Cổ Rome và tháp nghiêng Pisa</li>
+						<li>Vạn lý trường thành</li>
+					</ul>
+				</div>
+				<a href="#section0">Về đầu trang</a>
+			</div>
+			<div id="section4">
+				<h3>Ẩm thực</h3>
+				<div class="content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut sequi, modi, architecto eos quaerat eaque nobis esse. Esse beatae aliquid rem pariatur laborum quas iusto, facilis, consequatur velit sunt, eos.</p>
+					<img src="images/section4.jpg" alt="">
+				</div>
+				<a href="#section0">Về đầu trang</a>
+			</div>
+			<div id="section5">
+				<h3>Âm nhạc</h3>
+				<h4 class="title">Nhạc thiếu nhi</h4>
+				<div class="content">
+					<ul>
+						<li>Nắng sân trường</li>
+						<li>Mẹ yêu không nào</li>
+						<li>Ba bà đi bán lợn con</li>
+					</ul>
+					<img src="images/section2.jpg" alt="">
+				</div>
+				<hr>
+				<h4 class="title">Dân ca</h4>
+				<div class="content">
+					<ul>
+						<li>Nắng sân trường</li>
+						<li>Mẹ yêu không nào</li>
+						<li>Ba bà đi bán lợn con</li>
+					</ul>
+					<img src="images/section2.1.jpg" alt="">
+					
+				</div>
+				<a href="#section0">Về đầu trang</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

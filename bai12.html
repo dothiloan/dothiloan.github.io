@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tạo form và các điều kiện trên form</title>
+	<link rel="stylesheet" href="css/general.css">
+	<script src="jquery.min.js"></script>
+	<style>
+		div {
+			max-width: 700px;
+		    border: 1px solid aliceblue;
+		    margin: 60px auto;
+		    background: aliceblue;
+		}
+		h1 {
+			color: red;
+		}
+		table {
+			margin: 0 auto;
+		}
+		td {
+			padding: 10px 0;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1 class="text-center">Phiếu đăng ký tham gia chương trình khuyến mãi</h1>
+		<form action="">
+			<table>
+				<tr>
+					<td>Họ và tên: </td>
+					<td>
+						<input type="text" name="user" class="user">
+					</td>
+				</tr>
+				<tr>
+					<td>Địa chỉ: </td>
+					<td>
+						<input type="text" name="address" class="address">
+					</td>
+				</tr>
+				<tr>
+					<td>Điện thoại: </td>
+					<td>
+						<input type="text" name="phone" class="phone">
+					</td>
+				</tr>
+				<tr>
+					<td>Phái: </td>
+					<td>
+						<input type="radio" id="male" name="gender" value="male" checked="checked">
+						<label for="male">Nam</label>
+						<input type="radio" id="female" name="gender" value="female">
+						<label for="female">Nữ</label>
+					</td>
+				</tr>
+				<tr>
+					<td>Nghề nghiệp: </td>
+					<td>
+						<select id="job">
+						  <option value="teacher">Giáo viên</option>
+						  <option value="doctor">Bác sĩ</option>
+						  <option value="worker">Công nhân</option>
+						  <option value="other">Khác</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Chọn sản phẩm tham gia: </td>
+					<td>
+						<select id="products">
+						  <option value="product1">Kem đánh răng</option>
+						  <option value="product2">Bột giặt</option>
+						  <option value="product3">Sữa tắm</option>
+						  <option value="product4">Dầu gội đầu</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Số người dự đoán tham gia: </td>
+					<td>
+						<input type="number" name="number" class="number">
+					</td>
+				</tr>
+				<tr>
+					<td><input type="button" value="Đồng ý" class="submit"></td>
+				</tr>
+			</table>
+		</form>
+		<p class="message text-center" style="color: red;"></p>
+	</div>
+	
+
+<script>
+	$(document).ready(function() {
+		$('.submit').click(function(){
+			$user = $('.user').val();
+			$address = $('.address').val();
+			$phone = $('.phone').val();
+			$number = $('.number').val();
+			if ($user != '' && $address != '' && $phone != '' && $number != '') {
+				$('.message').html('<b>Bạn đã đăng ký thành công !!!</b>');
+			}else {
+				$('.message').html('<b>Bạn chưa điền đầy đủ thông tin</b>');
+			}
+			
+		});
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Đăng ký du lịch</title>
+	<link rel="stylesheet" href="css/general.css">
+	<script src="jquery.min.js"></script>
+	<style>
+		div {
+			max-width: 700px;
+		    border: 1px solid aliceblue;
+		    margin: 60px auto;
+		    background: aliceblue;
+		}
+		h1 {
+			color: red;
+		}
+		table {
+			margin: 0 auto;
+			border-collapse: collapse;
+			min-width: 450px;
+		}
+		td {
+			padding: 10px 0;
+		}
+		table, th, td {
+			border: 1px solid #fff;
+		}
+		.have-border {
+			margin: 0 auto;
+		    border: 1px solid rebeccapurple;
+		    max-width: 300px;
+		    padding: 20px 0 10px 0;
+		    position: relative;
+		}
+		.have-border input {
+			width: 50px;
+		}
+		.have-border p {
+			background: aliceblue;
+		    width: 50%;
+		    padding: 0 0 0 10px;
+		    margin-left: 3px;
+		    position: absolute;
+		    top: -25px;
+		}
+		.ml-25 {
+			margin-left: 25px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1 class="text-center">Đăng ký du lịch</h1>
+		<form action="">
+			<table>
+				<tr>
+					<td>Họ và tên: </td>
+					<td>
+						<input type="text" name="user" class="user">
+					</td>
+				</tr>
+				<tr>
+					<td>Địa chỉ: </td>
+					<td>
+						<input type="text" name="address" class="address">
+					</td>
+				</tr>
+				<tr>
+					<td>Điện thoại: </td>
+					<td>
+						<input type="text" name="phone" class="phone">
+					</td>
+				</tr>
+				<tr>
+					<td>Khách Việt Nam: </td>
+					<td>
+						<input type="checkbox" name="nation" class="nation" checked="checked">
+					</td>
+				</tr>
+				<tr>
+					<td>Chọn tour: </td>
+					<td>
+						<select id="tours">
+						  <option value="tour1">Tour 1</option>
+						  <option value="tour2">Tour 2</option>
+						  <option value="tour3">Tour 3</option>
+						  <option value="tour4">Tour 4</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Phương tiện: </td>
+					<td>
+						<input type="radio" id="plane" name="vehicle" value="plane" checked="checked">
+						<label for="plane">Máy bay</label>
+						<input type="radio" id="car" name="vehicle" value="car">
+						<label for="car">Xe ô tô</label>
+					</td>
+				</tr>
+				
+				<tr>
+					<td colspan="2">
+						<div class="have-border">
+							<p>Số lượng đoàn khách</p>
+							<label for="" class="ml-25">Người lớn</label>
+							<input type="text" name="adult" class="adult">
+							<label for="">Trẻ em</label>
+							<input type="text" name="child" class="child">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Ghi chú thêm </td>
+					<td>
+						<textarea name="" id="" cols="30" rows="3"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="button" value="Đồng ý" class="submit"></td>
+				</tr>
+			</table>
+		</form>
+		<p class="message text-center" style="color: red;"></p>
+	</div>
+	
+
+<script>
+	$(document).ready(function() {
+		$('.submit').click(function(){
+			$user = $('.user').val();
+			$address = $('.address').val();
+			$phone = $('.phone').val();
+			$adult = $('.adult').val();
+			$child = $('.child').val();
+			if ($user != '' && $address != '' && $phone != '' && $adult != '' && $child != '') {
+				$('.message').html('<b>Bạn đã đăng ký thành công !!!</b>');
+			}else {
+				$('.message').html('<b>Bạn chưa điền đầy đủ thông tin</b>');
+			}
+			
+		});
+	});
+</script>
+</body>
+</html>

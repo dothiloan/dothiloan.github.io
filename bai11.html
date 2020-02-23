@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tạo form và các điều kiện trên form</title>
+	<link rel="stylesheet" href="css/general.css">
+	<script src="jquery.min.js"></script>
+	<style>
+		div {
+			max-width: 500px;
+		    border: 1px solid aliceblue;
+		    margin: 60px auto;
+		    min-height: 250px;
+		    background: aliceblue;
+		}
+		h1 {
+			color: red;
+		}
+		table {
+			margin: 0 auto;
+		}
+		td {
+			padding: 10px 0;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1 class="text-center">Đăng nhập</h1>
+		<form action="">
+			<table>
+				<tr>
+					<td>Mã người dùng: </td>
+					<td>
+						<input type="text" name="user" class="user">
+					</td>
+				</tr>
+				<tr>
+					<td>Mật khẩu: </td>
+					<td>
+						<input type="password" name="password">
+					</td>
+				</tr>
+				<tr>
+					<td><input type="button" value="Đồng ý" class="submit"></td>
+				</tr>
+			</table>
+		</form>
+		<p class="show-user text-center"></p>
+	</div>
+	
+
+<script>
+	$(document).ready(function() {
+		$('.submit').click(function(){
+			$user = $('.user').val();
+			$('.show-user').html($user);
+		});
+	});
+</script>
+</body>
+</html>
