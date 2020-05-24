@@ -12,7 +12,9 @@
         var d = new Date();
         var currentYear = d.getFullYear();
         var value = prompt('Please enter your birth year', '');
-        var myAge = currentYear - value;
+        if (value > 0) {
+            var myAge = currentYear - value;
+        }
 
         if(myAge > 0) {
             alert('Your age is ' + myAge);
