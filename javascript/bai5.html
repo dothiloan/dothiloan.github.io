@@ -20,7 +20,10 @@
             var value = prompt('Please enter your birth year', '');
         }while(value > currentYear);
 
-        document.getElementById('demo').innerHTML = 'Your age is ' + (currentYear - value);
+        if(value > 0) {
+            document.getElementById('demo').innerHTML = 'Your age is ' + (currentYear - value);
+        }
+        
         
     </script>
 </body>
