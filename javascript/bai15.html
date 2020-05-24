@@ -4,19 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .myCaculate {
+            background: aliceblue;
+            width: 500px;
+            height: 300px;
+            margin: 20px auto;
+            padding: 10px 30px;
+        }
+        h3 {
+            text-align: center;
+        }
+        label {
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        #result {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <input type="number" id="number1" placeholder="Enter number 1">
-    <select name="" id="calc">
-        <option value="">Enter your caculation</option>
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="x">x</option>
-        <option value="/">/</option>
-    </select>
-    <input type="number" id="number2" placeholder="Enter number 2">
-    <button onclick="startCalc()">Caculate</button>
-    <p id="result">Result: </p>
+    <div class="myCaculate">
+        <h3>Máy tính điện tử</h3>
+        <label for="">Nhập số thứ nhất: </label>
+        <input type="number" id="number1" placeholder="Nhập số thứ nhất">
+        <br>
+        <label for="">Nhập phép tính: </label>
+        <select name="" id="calc">
+            <option value="">Phép tính</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="x">x</option>
+            <option value="/">/</option>
+        </select>
+        <br>
+        <label for="">Nhập số thứ hai: </label>
+        <input type="number" id="number2" placeholder="Nhập số thứ hai">
+        <br>
+        <button onclick="startCalc()">Thực hiện</button>
+        <p id="result">Kết quả: </p>
+    </div>
+    
     <script>
         function startCalc() {
             var number1 = document.getElementById('number1').value;
@@ -38,7 +68,7 @@
                     result = Number(number1) / Number(number2);
                     break;
             }
-            document.getElementById("result").innerHTML = 'Result: ' + result;
+            document.getElementById("result").innerHTML = 'Kết quả: ' + result;
         }
     </script>
 </body>

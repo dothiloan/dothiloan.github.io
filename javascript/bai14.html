@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            text-align: center;
+        }
+        .mySlides {
+            display: inline-block;
+            position: relative;
+        }
+        .dots {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .dots i {
+            color: #fff;
+            font-size: 30px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .slide img {
+            width: 400px;
+            height: 300px;
+        }
+        .slide.active {
+            display: block;
+        }
+        .slide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="mySlides">
+        <div class="slide active">
+            <img src="images/img1.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/img2.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/img3.jpg" alt="">
+        </div>
+
+        <div class="dots">
+            <i class="fa fa-angle-left previous" aria-hidden="true" onclick="previousSlide()"></i>
+            <i class="fa fa-angle-right next" aria-hidden="true" onclick="nextSlide()"></i>
+        </div>
+    </div>
+
+    <script>
+        function nextSlide() {
+            var mySlide = document.getElementsByClassName('slide');
+            for (var i = 0; i < mySlide.length; i++) {
+                if (i+ 1 != mySlide.length) {
+                    if(mySlide[i]['className'] == 'slide active'){
+                        mySlide[i + 1].classList.add('active');
+                        mySlide[i].classList.remove('active');
+                        i = mySlide.length + 1;
+                    }
+                }
+            }
+        }
+
+        function previousSlide() {
+            var mySlide = document.getElementsByClassName('slide');
+            for (var i = 0; i < mySlide.length; i++) {
+                if (i- 1 >= 0) {
+                    if(mySlide[i]['className'] == 'slide active'){
+                        mySlide[i - 1].classList.add('active');
+                        mySlide[i].classList.remove('active');
+                        i = mySlide.length + 1;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

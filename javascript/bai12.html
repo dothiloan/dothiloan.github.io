@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantity: <input type="number" id="quantity" onkeyup="caculatePrice()">
+    Price: <input type="number" id="price" onkeyup="caculatePrice()">
+    Total Price: <input type="number" id="totalPrice">
+
+    <script>
+        function caculatePrice() {
+            var quantity = document.getElementById('quantity').value;
+            var price = document.getElementById('price').value;
+            var total = quantity * price;
+            document.getElementById('totalPrice').value = total;
+        }
+    </script>
+</body>
+</html>
