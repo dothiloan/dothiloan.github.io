@@ -14,13 +14,14 @@
         var value = prompt('Please enter your birth year', '');
         if (value > 0) {
             var myAge = currentYear - value;
+            if(myAge > 0) {
+                alert('Your age is ' + myAge);
+            }else {
+                alert('Invalid your age');
+            }   
         }
 
-        if(myAge > 0) {
-            alert('Your age is ' + myAge);
-        }else {
-            alert('Invalid your age');
-        }    
+         
         
     </script>
 </body>
